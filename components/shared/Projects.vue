@@ -62,9 +62,19 @@
     components: { ScrollAnimation, Content_btn },
 
     async fetch() {
+      function compare( a, b ) {
+        if ( a.sort < b.sort ){
+          return -1;
+        }
+        if ( a.sort > b.sort ){
+          return 1;
+        }
+        return 0;
+      }
       this.projectsList = await fetch(
         'https://strapi-up.verodigital.site/projects-lists',
       ).then(res => res.json());
+      this.projectsList = this.projectsList.sort(compare)
       this.projectsPage = await fetch(
         'https://strapi-up.verodigital.site/project',
       ).then(res => res.json());
