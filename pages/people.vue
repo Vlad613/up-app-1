@@ -15,10 +15,10 @@
         <img src="/arrow-down.svg" alt="" />
       </div>
     </div>
-    <People_Studio :data="people.explore" />
     <Studio :data="{ about: people.about }" />
+    <People_Studio :data="people.explore" />
     <Team :data="people.team" />
-    <Jobs :data="people.careers" @clicked="modalOpen = !modalOpen" />
+    <Jobs :data="people.careers" @clicked="modalOpen = !modalOpen" v-if="false"/>
     <News />
     <div class="modal-send" v-if="modalOpen">
       <div class="close" @click="modalOpen = !modalOpen">
