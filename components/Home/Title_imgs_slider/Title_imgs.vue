@@ -42,8 +42,13 @@
           <img src="/arrow-down.svg" alt="" />
         </div>
         <img
-          class="title-imgs_img"
+          class="title-imgs_img desktop"
           :src="getUrl(data[key].background_image.url)"
+          alt=""
+        />
+        <img
+          class="title-imgs_img mobile"
+          :src="getUrl(data[key].background_image_mobile ? data[key].background_image_mobile.url : data[key].background_image.url)"
           alt=""
         />
       </div>
@@ -103,7 +108,7 @@
           });
         }
       },
-      changeSlide(key, length, length2) {
+      changeSlide(key, length) {
         if (key === 'one') {
           this.changeSlideText(this.keyData[this.slideIdx]);
         }
@@ -115,7 +120,7 @@
           if (key !== 'four') {
             this.changeSlideText(this.keyData[this.slideIdx]);
           }
-        }, 1000 * (key === 'one' ? length - 1.5 : length));
+        }, 1000 * (length));
       },
       changeSlideText(key) {
         let interval = setInterval(() => {
@@ -179,6 +184,7 @@
           height: 100%;
           width: 100%;
           object-fit: cover;
+          object-position: center;
         }
         .arrow {
           position: absolute;

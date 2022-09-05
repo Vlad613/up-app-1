@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-      <div class="span-2">
+      <div class="span-2" v-if="project.image_3">
         <div
           :class="[
             'content-type-3_img-wrap-3',

@@ -18,7 +18,7 @@
     import Content_btn from "../../shared/elements/Content_btn";
 
     export default {
-        name: 'start-span-item',
+        name: 'start-span-item2',
         components: {Content_btn},
         props: {
             text: String,

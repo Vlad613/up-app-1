@@ -7,7 +7,7 @@
         }}</span>
         <span class="main-page_small-text">{{ project.undertitle }}</span>
       </div>
-      <Image_Scale_Block :img="getUrl(project.background_image.url)" />
+      <Image_Scale_Block :img="getUrl(project.background_image.url)" :imgMobile="getUrl(project.background_image_mobile ? project.background_image_mobile.url : project.background_image.url )"/>
       <div class="arrow" @click="scrollTo">
         <img src="/arrow-down.svg" alt="" />
       </div>

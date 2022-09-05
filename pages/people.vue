@@ -9,7 +9,8 @@
       </div>
 
       <ScrollAnimation cover :opacity="false">
-        <img :src="getUrl(people.backgroun_image.url)" alt="" />
+        <img :src="getUrl(people.backgroun_image.url)" alt="" class="desktop"/>
+        <img :src="getUrl(people.backgroun_image_mobile ? people.backgroun_image_mobile.url : people.backgroun_image.url)" alt="" class="mobile"/>
       </ScrollAnimation>
       <div class="arrow" @click="scrollTo">
         <img src="/arrow-down.svg" alt="" />
@@ -18,7 +19,7 @@
     <Studio :data="{ about: people.about }" />
     <People_Studio :data="people.explore" />
     <Team :data="people.team" />
-    <Jobs :data="people.careers" @clicked="modalOpen = !modalOpen" v-if="false"/>
+    <Jobs :data="people.careers" @clicked="modalOpen = !modalOpen" />
     <News />
     <div class="modal-send" v-if="modalOpen">
       <div class="close" @click="modalOpen = !modalOpen">

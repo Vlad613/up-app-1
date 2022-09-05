@@ -21,7 +21,9 @@ html {
   margin-bottom: 37px;
   width: 50%;
 }
-
+.mobile {
+  display: none;
+}
 
 @media screen and (max-width: 1280px) {
   .main-page__content-title-position {
@@ -36,6 +38,12 @@ html {
 }
 
 @media screen and (max-width: 428px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
   .main-page__content-title-position {
     margin: 108px 0 0 var(--main-big-margin);
   }

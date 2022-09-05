@@ -11,7 +11,7 @@
             :id="item.id"
             :img="item.background_image.url"
             :title="item.short_title"
-            :date="item.published_at"
+            :date="item.date ? item.date : item.published_at"
             :tags="item.tags_news"
           />
         </swiper-slide>

@@ -8,7 +8,8 @@
         <span class="main-page_small-text">{{ process.undertitle }}</span>
       </div>
       <ScrollAnimation cover>
-        <img :src="getUrl(process.background_image.url)" alt="" />
+        <img :src="getUrl(process.background_image.url)" alt="" class="desktop"/>
+        <img :src="getUrl(process.background_image_mobile ? process.background_image_mobile.url : process.background_image.url)" alt="" class="mobile"/>
       </ScrollAnimation>
       <div class="arrow" @click="scrollTo">
         <img src="/arrow-down.svg" alt="" />

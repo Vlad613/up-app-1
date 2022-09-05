@@ -20,7 +20,7 @@
         <nuxt-link
           class="nav-menu-btn nav-menu-btn-text"
           to="/process"
-          @click.native="setModalIsActive"
+          :event="disableProcess ? '' : 'click'"
         >
           Process
         </nuxt-link>
@@ -93,6 +93,11 @@
 
   export default {
     name: 'Nav_MenuModal',
+    data() {
+      return {
+        disableProcess: true
+      }
+    },
     methods: {
       ...mapActions('app', ['setModalIsActive']),
     },
@@ -131,7 +136,7 @@
         .nav-menu-btn {
           position: relative;
           cursor: pointer;
-          letter-spacing: -4px;
+          letter-spacing: 0;
 
           &:after {
             content: '';

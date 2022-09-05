@@ -6,7 +6,7 @@
       </scroll-animation>
     </div>
     <div class="content">
-      <span class="date-text">{{ getDate(news.published_at) }}</span>
+      <span class="date-text">{{ getDate(news.date ? news.date : news.published_at) }}</span>
       <span class="item-project-title-text">{{ news.title }}</span>
     </div>
 
@@ -16,40 +16,22 @@
 
 
     <div class="project-content">
-      <div class="content-type-1">
+      <div :class="`content-type-${index % 2 === 0 ? 1 : 2}`" v-for="(item, index) in news.news_image_block_1" :key="item.id">
         <div
-          class="content-type-1_img-wrap item-project_img-wrap_height">
-          <ScrollAnimation :opacity="false" cover v-if="news.news_image_block_1.image">
-            <img :src="getUrl(news.news_image_block_1.image.url)" alt=""/>
+          :class="[`content-type-${index % 2 === 0 ? 1 : 2}_img-wrap`, 'item-project_img-wrap_height']">
+          <ScrollAnimation :opacity="false" cover v-if="item.image">
+            <img :src="getUrl(item.image.url)" alt=""/>
           </ScrollAnimation>
         </div>
         <p
-          v-if="news.news_image_block_1.description !== undefined"
+          v-if="item.description !== undefined"
           class="item-project_img-description_width
          item-project_img-description_margin-top
          content-p"
         >
-          {{ news.news_image_block_1.description }}
+          {{ item.description }}
         </p>
       </div>
-
-
-      <div class="content-type-2">
-        <div class="content-type-2_img-wrap item-project_img-wrap_height">
-          <ScrollAnimation :opacity="false" cover v-if="news.news_image_block_2.image">
-            <img :src="getUrl(news.news_image_block_2.image.url)" alt=""/>
-          </ScrollAnimation>
-        </div>
-        <p
-          v-if="news.news_image_block_2.description !== undefined"
-          class="item-project_img-description_width
-         item-project_img-description_margin-top
-         content-p"
-        >
-          {{ news.news_image_block_2.description }}
-        </p>
-      </div>
-
     </div>
 
     <div class="paginator-wrap">

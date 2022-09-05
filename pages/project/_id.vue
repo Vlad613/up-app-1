@@ -9,7 +9,8 @@
         <span class="main-page_small-text">{{ project.title_card }}</span>
       </div>
       <scroll-animation :opacity="false" cover>
-        <img :src="getUrl(project.background_image.url)" alt="" />
+        <img :src="getUrl(project.background_image.url)" alt="" class="dekstop"/>
+        <img :src="getUrl(project.background_image_mobile ? project.background_image_mobile.url : project.background_image.url)" alt="" class="mobile"/>
       </scroll-animation>
       <div class="arrow" @click="scrollTo">
         <img src="/arrow-down.svg" alt="" />
