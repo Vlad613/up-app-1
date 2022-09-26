@@ -25,9 +25,8 @@
         class="item-project_img-description_width
          item-project_img-description_margin-top
          content-p"
-      >
-        {{ project.description }}
-      </p>
+        v-html="project.description"
+      ></p>
     </div>
 
     <div

@@ -7,9 +7,7 @@
 
     <div class="content-block">
       <div class="content-column-1">
-        <p class="content-p">
-          {{ data.description }}
-        </p>
+        <p class="content-p" v-html="data.description" />
       </div>
       <div class="content-column-2">
         <div class="img-wrap process_img-wrap_height">
@@ -19,9 +17,8 @@
         </div>
 
         <p
-          class="content-p process_img-description_margin-top process_img-description_width"
+          class="content-p process_img-description_margin-top process_img-description_width" v-html="data.description_image"
         >
-          {{ data.description_image }}
         </p>
       </div>
     </div>

@@ -8,9 +8,7 @@
     <div class="content-block">
       <div class="span-1">
         <div class="content-column-1">
-          <p class="content-p">
-            {{ data.text_image[0].description }}
-          </p>
+          <p class="content-p" v-html="data.text_image[0].description" />
         </div>
         <div
           :class="[

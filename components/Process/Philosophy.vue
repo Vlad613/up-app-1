@@ -9,9 +9,7 @@
 
     <div class="content-block">
       <div class="content-column-1">
-        <p class="content-p">
-          {{ data.description }}
-        </p>
+        <p class="content-p" v-html="data.description" />
       </div>
       <div class="content-column-2">
         <div class="img-wrap process_img-wrap_height">
@@ -19,9 +17,7 @@
             <img :src="getUrl(data.image.url)" alt="" />
           </scroll-animation>
         </div>
-        <p class="content-p process_img-description_margin-top">
-          {{ data.description_image }}
-        </p>
+        <p class="content-p process_img-description_margin-top" v-html="data.description_image" />
       </div>
     </div>
   </div>

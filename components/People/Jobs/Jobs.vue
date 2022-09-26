@@ -8,9 +8,7 @@
     <!--      :vacancy="vacancy"-->
     <!--      @clicked="$emit('clicked')"-->
     <!--    />-->
-    <p class="team__text_p content-p">
-      {{ data.description }}
-    </p>
+    <p class="team__text_p content-p" v-html="data.description" />
   </div>
 </template>
 

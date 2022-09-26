@@ -4,7 +4,7 @@
     <span class="content-title">{{ data.title }}</span>
 
     <div class="content-block">
-      <p class="content-p">{{ data.description }}</p>
+      <p class="content-p" v-html="data.description" />
 
       <div class="content-column-2">
         <div class="img-wrap">
@@ -14,9 +14,8 @@
         </div>
         <p
           class="process_img-description_margin-top content-p img-width-description"
-        >
-          {{ data.description_image }}
-        </p>
+          v-html="data.description_image"
+        ></p>
       </div>
     </div>
   </div>

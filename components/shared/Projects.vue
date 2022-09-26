@@ -13,7 +13,7 @@
       class="description pages-content-margin-left-big"
     >
       <div class="description-title">
-        <span class="content-title" v-html="projectsPage.title_content"></span>
+        <div class="content-title" v-html="projectsPage.title_content"></div>
       </div>
       <p class="content-p" v-html="projectsPage.description"></p>
     </div>

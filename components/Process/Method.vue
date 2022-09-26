@@ -28,9 +28,7 @@
             <img :src="getUrl(data.text_image[1].image.url)" alt="" />
           </scroll-animation>
         </div>
-        <p class="content-p process_img-description_margin-top">
-          {{ data.text_image[1].description }}
-        </p>
+        <p class="content-p process_img-description_margin-top" v-html="data.text_image[1].description" />
       </div>
       <div class="content-block-span-2__column-2">
         <p class="content-p">{{ data.text_image[2].description }}</p>

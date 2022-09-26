@@ -16,7 +16,7 @@
       <div class="team_text-block__wrap">
         <div class="team_text-block">
           <span class="content-title">{{ data.title }}</span>
-          <p class="team__text_p content-p">{{ data.description }}</p>
+          <p class="team__text_p content-p" v-html="data.description" />
         </div>
       </div>
     </div>

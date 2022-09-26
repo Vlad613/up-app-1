@@ -15,7 +15,7 @@
           ]"
         >
           <span class="content-title">{{ data.about.title }}</span>
-          <p class="studio__text_p content-p">{{ data.about.description }}</p>
+          <p class="studio__text_p content-p" v-html="data.about.description" />
           <div
             v-if="this.$route.path === '/' && data.about.link"
             class="studio_btn_wrap"

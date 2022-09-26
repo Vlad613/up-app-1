@@ -30,9 +30,7 @@
       </div>
     </div>
 
-    <p class="content-p" ref="vacancy_description">
-      {{ vacancy.description }}
-    </p>
+    <p class="content-p" ref="vacancy_description" v-html="vacancy.description"></p>
   </div>
 </template>
 
