@@ -164,7 +164,7 @@
       --main-mini-margin: 24px;
     }
   }
-  p a {
+  p a, u {
     text-decoration: underline;
   }
 </style>
