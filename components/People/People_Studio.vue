@@ -60,13 +60,13 @@
       overflow: hidden;
 
       .content-p {
-        width: 420px;
+        width: calc(50% - var(--main-big-margin));
         margin-left: var(--main-big-margin);
         margin-right: var(--main-very-mini-margin);
       }
 
       .content-column-2 {
-        width: calc(100% - 700px);
+        width: calc(50% - var(--main-mini-margin));
         display: flex;
         flex-direction: column;
 

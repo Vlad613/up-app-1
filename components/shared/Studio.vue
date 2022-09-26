@@ -80,8 +80,7 @@
         display: flex;
 
         .studio_text-block {
-          max-width: 375px;
-          margin-right: var(--main-mini-margin);
+          max-width: calc(100% - var(--main-big-margin));
           display: flex;
           flex-direction: column;
           margin-top: -130px;

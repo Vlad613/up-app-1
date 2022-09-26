@@ -114,7 +114,7 @@ export default {
     height: 100%;
     background-size: cover;
     background-position: center;
-
+    filter: brightness(0.75);
     img {
       width: 100%;
       height: 100%;

@@ -76,13 +76,12 @@
     width: 100%;
     display: flex;
     //min-height: 80px;
-
     .main-page_small-text {
       margin-top: 15px;
       a {
         color: white;
         outline: 0;
-        font-family: 'SFProDisplay';
+        font-family: 'SFProDisplay', sans-serif;
       }
     }
 
@@ -93,7 +92,7 @@
         position: absolute;
         top: calc(100% + 5px);
         left: 0;
-        width: 0%;
+        width: 0;
         height: 4px;
         background-color: #fff;
         transition: width 0.3s;

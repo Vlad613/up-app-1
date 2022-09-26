@@ -21,7 +21,7 @@
         </ScrollAnimation>
       </div>
       <p
-        v-if="project.description !== undefined"
+        v-if="project.description !== undefined && project.description !== '' && project.description !== ' ' && project.description !== null"
         class="item-project_img-description_width
          item-project_img-description_margin-top
          content-p"
@@ -39,7 +39,7 @@
         </ScrollAnimation>
       </div>
       <p
-        v-if="project.description !== undefined"
+        v-if="project.description !== undefined && project.description !== '' && project.description !== ' ' && project.description !== null"
         class="item-project_img-description_width
          item-project_img-description_margin-top
          content-p"
@@ -65,7 +65,7 @@
             </ScrollAnimation>
           </div>
           <p
-            v-if="project.description !== undefined"
+            v-if="project.description !== undefined && project.description !== '' && project.description !== ' ' && project.description !== null"
             class="item-project_img-description_margin-top
          content-p"
           >
@@ -131,7 +131,7 @@
         </ScrollAnimation>
       </div>
       <p
-        v-if="project.description !== undefined"
+        v-if="project.description !== undefined && project.description !== '' && project.description !== ' ' && project.description !== null"
         class="item-project_img-description_margin-top
          item-project_img-description_width
          content-p"
@@ -155,7 +155,7 @@
         </ScrollAnimation>
       </div>
       <p
-        v-if="project.description !== undefined"
+        v-if="project.description !== undefined && project.description !== '' && project.description !== ' ' && project.description !== null"
         class="item-project_img-description_width
          item-project_img-description_margin-top
          content-p"
@@ -220,7 +220,7 @@
       display: flex;
       flex-direction: column;
       align-self: flex-end;
-      margin-bottom: 167px;
+      margin-bottom: 144px;
 
       .content-type-2_img-wrap {
         width: 100%;
@@ -236,7 +236,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      margin-bottom: 280px;
+      margin-bottom: 144px;
 
       .span-1 {
         width: 100%;
@@ -314,8 +314,8 @@
       flex-direction: column;
       align-self: flex-end;
       margin-right: var(--main-mini-margin);
-      margin-bottom: 280px;
-      margin-top: 100px;
+      margin-bottom: 144px;
+      //margin-top: 100px;
 
       .content-type-5_img-wrap {
         width: 100%;
@@ -333,7 +333,7 @@
       flex-direction: column;
       align-self: flex-end;
       margin-left: var(--main-mini-margin);
-      margin-bottom: 125px;
+      margin-bottom: 144px;
 
       .content-type-6_img-wrap {
         width: 100%;
@@ -362,7 +362,7 @@
       }
 
       .content-type-3 {
-        margin-bottom: 100px;
+        margin-bottom: 57px;
 
         .span-1 {
           .content-type-3_column-1 {
@@ -394,7 +394,7 @@
       }
 
       .content-type-4 {
-        margin-bottom: 100px;
+        margin-bottom: 57px;
       }
 
       .content-type-5 {
@@ -408,7 +408,7 @@
       }
 
       .content-type-6 {
-        margin-bottom: 187px;
+        margin-bottom: 57px;
 
         .content-p {
           align-self: flex-end;
@@ -459,7 +459,7 @@
       }
 
       .content-type-6 {
-        margin-bottom: 195px;
+        margin-bottom: 90px;
 
         .content-p {
           align-self: flex-start;
@@ -499,7 +499,7 @@
       }
 
       .content-type-6 {
-        margin-bottom: 155px;
+        margin-bottom: 60px;
 
         .content-p {
           margin-left: calc(var(--main-big-margin) - var(--main-mini-margin));
@@ -564,7 +564,7 @@
         }
       }
       .content-type-6 {
-        margin-bottom: 162px;
+        margin-bottom: 50px;
         margin-left: 0;
         width: unset;
         .content-p {

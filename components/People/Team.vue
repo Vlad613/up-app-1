@@ -49,16 +49,16 @@
     overflow: hidden;
 
     .team_content-block {
-      width: calc(100% - var(--main-big-margin) - var(--main-mini-margin));
-      margin-left: var(--main-big-margin);
-      margin-right: var(--main-mini-margin);
+      width: 100%;
       margin-top: 82px;
       display: flex;
 
       .team_img-wrap {
         position: relative;
         display: flex;
+        width: calc(50% - var(--main-big-margin));
         margin-right: var(--main-very-mini-margin);
+        margin-left: var(--main-big-margin);
 
         img {
           max-width: 100%;
@@ -74,7 +74,7 @@
       }
 
       .team_text-block__wrap {
-        width: calc((100% - 60px) / 2 + 50px);
+        width: calc(50% - var(--main-mini-margin));
         display: flex;
         margin-top: -130px;
 

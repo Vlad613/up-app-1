@@ -233,6 +233,7 @@
       img {
         width: 100%;
         object-fit: cover;
+        filter: brightness(0.75);
       }
     }
 

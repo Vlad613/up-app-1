@@ -185,6 +185,7 @@
           width: 100%;
           object-fit: cover;
           object-position: center;
+          filter: brightness(0.75);
         }
         .arrow {
           position: absolute;
