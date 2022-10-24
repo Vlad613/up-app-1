@@ -14,11 +14,12 @@ export default {
     './assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr.css',
     './assets/fonts/HelvetikaNow/HelveticaNowDisplay.css',
     './assets/fonts/SFProDisplay/SFProDisplay.css',
+    './assets/fonts/Garamond/Garamond.css',
     './assets/styles/reset.scss',
     './assets/styles/text.scss',
     './assets/styles/main.scss',
     './assets/styles/process.scss',
-    './assets/styles/item_project.scss',
+    './assets/styles/item_project.scss'
     // 'swiper/css/swiper.css',
   ],
 

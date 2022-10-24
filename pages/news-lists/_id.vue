@@ -16,15 +16,15 @@
 
 
     <div class="project-content">
-      <div :class="`content-type-${index % 2 === 0 ? 1 : 2}`" v-for="(item, index) in news.news_image_block_1" :key="item.id">
+      <div :class="`content-type-${index % 2 === 0 ? 1 : 2}`" v-for="(item, index) in news.news_image_block_1" :key="item.id" v-if="item.image || item.description">
         <div
-          :class="[`content-type-${index % 2 === 0 ? 1 : 2}_img-wrap`, 'item-project_img-wrap_height']">
-          <ScrollAnimation :opacity="false" cover v-if="item.image">
+          :class="[`content-type-${index % 2 === 0 ? 1 : 2}_img-wrap`]" v-if="item.image">
+          <ScrollAnimation :opacity="false" v-if="item.image">
             <img :src="getUrl(item.image.url)" alt=""/>
           </ScrollAnimation>
         </div>
         <p
-          v-if="item.description !== undefined"
+          v-if="item.description !== undefined && item.description && item.description !== ''"
           class="item-project_img-description_width
          item-project_img-description_margin-top
          content-p"
@@ -66,79 +66,151 @@ export default {
     }
   },
   head() {
-    return {
-      title: this.news.SEO.seoTitle,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.news.SEO.seoDescription,
-        },
-        {
-          hid: 'fb:app_id',
-          property: 'fb:app_id',
-          content: 988674798283826,
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.news.SEO.seoTitle,
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: 'http://localhost:3000',
-        },
-        {
-          hid: 'og:type',
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.news.SEO.seoDescription,
-        },
-        {
-          hid: 'og:site_name',
-          property: 'og:site_name',
-          content: 'up',
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content:
-            'https://strapi-up.verodigital.site/' +
-            (this.news.SEO.seoImage
-              ? this.news.SEO.seoImage.url
-              : '/uploads/28_s5_cam001_211541b7b2.jpg'),
-        },
-        {
-          name: 'twitter:title',
-          content: this.news.SEO.seoTitle,
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary',
-        },
-        {
-          name: 'twitter:description',
-          content: this.news.SEO.seoDescription,
-        },
-        {
-          name: 'twitter:site',
-          content: 'website',
-        },
-        {
-          name: 'twitter:image',
-          content:
-            'https://strapi-up.verodigital.site/' +
-            (this.news.SEO.seoImage
-              ? this.news.SEO.seoImage.url
-              : '/uploads/28_s5_cam001_211541b7b2.jpg'),
-        },
-      ],
-    };
+    if(this.news.SEO) {
+      return {
+        title: this.news.SEO.seoTitle ? this.news.SEO.seoTitle : 'News Title',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.news.SEO.seoDescription ? this.news.SEO.seoDescription : 'Description',
+          },
+          {
+            hid: 'fb:app_id',
+            property: 'fb:app_id',
+            content: 988674798283826,
+          },
+          {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.news.SEO.seoTitle ? this.news.SEO.seoTitle : 'News Title',
+          },
+          {
+            hid: 'og:url',
+            property: 'og:url',
+            content: 'http://localhost:3000',
+          },
+          {
+            hid: 'og:type',
+            property: 'og:type',
+            content: 'website',
+          },
+          {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.news.SEO.seoDescription ? this.news.SEO.seoDescription : 'Description',
+          },
+          {
+            hid: 'og:site_name',
+            property: 'og:site_name',
+            content: 'up',
+          },
+          {
+            hid: 'og:image',
+            property: 'og:image',
+            content:
+              'https://strapi-up.verodigital.site/' +
+              (this.news.SEO.seoImage
+                ? this.news.SEO.seoImage.url
+                : '/uploads/28_s5_cam001_211541b7b2.jpg'),
+          },
+          {
+            name: 'twitter:title',
+            content: this.news.SEO.seoTitle ? this.news.SEO.seoTitle : 'News Title',
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary',
+          },
+          {
+            name: 'twitter:description',
+            content: this.news.SEO.seoDescription ? this.news.SEO.seoDescription : 'Description',
+          },
+          {
+            name: 'twitter:site',
+            content: 'website',
+          },
+          {
+            name: 'twitter:image',
+            content:
+              'https://strapi-up.verodigital.site/' +
+              (this.news.SEO.seoImage
+                ? this.news.SEO.seoImage.url
+                : '/uploads/28_s5_cam001_211541b7b2.jpg'),
+          },
+        ],
+      };
+    } else {
+      return {
+        title: 'News Title',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Description',
+          },
+          {
+            hid: 'fb:app_id',
+            property: 'fb:app_id',
+            content: 988674798283826,
+          },
+          {
+            hid: 'og:title',
+            property: 'og:title',
+            content: 'News Title',
+          },
+          {
+            hid: 'og:url',
+            property: 'og:url',
+            content: 'http://localhost:3000',
+          },
+          {
+            hid: 'og:type',
+            property: 'og:type',
+            content: 'website',
+          },
+          {
+            hid: 'og:description',
+            property: 'og:description',
+            content: 'Description',
+          },
+          {
+            hid: 'og:site_name',
+            property: 'og:site_name',
+            content: 'up',
+          },
+          {
+            hid: 'og:image',
+            property: 'og:image',
+            content:
+              'https://strapi-up.verodigital.site/' +
+              '/uploads/28_s5_cam001_211541b7b2.jpg',
+          },
+          {
+            name: 'twitter:title',
+            content: 'News Title',
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary',
+          },
+          {
+            name: 'twitter:description',
+            content: 'Description',
+          },
+          {
+            name: 'twitter:site',
+            content: 'website',
+          },
+          {
+            name: 'twitter:image',
+            content:
+              'https://strapi-up.verodigital.site/' +
+              '/uploads/28_s5_cam001_211541b7b2.jpg',
+          },
+        ],
+      };
+    }
   },
 
   data() {
@@ -222,7 +294,12 @@ export default {
       margin-bottom: 144px;
 
       .content-type-1_img-wrap {
-        width: calc(100% - var(--main-mini-margin));
+        max-width: calc(100% - var(--main-mini-margin));
+        width: auto;
+        height: fit-content;
+        .scale-content {
+          text-align: left;
+        }
       }
 
       .content-p {
@@ -238,13 +315,21 @@ export default {
       margin-bottom: 167px;
 
       .content-type-2_img-wrap {
-        width: 100%;
+        max-width: 100%;
+        width: auto;
+        height: fit-content;
+        .scale-content {
+          text-align: right;
+        }
       }
 
       .content-p {
         align-self: flex-end;
         margin-right: var(--main-mini-margin);
       }
+    }
+    & > div:last-child {
+      margin-bottom: 0;
     }
   }
 

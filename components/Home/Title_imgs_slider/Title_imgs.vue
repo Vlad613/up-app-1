@@ -278,7 +278,7 @@
   .slide-images-leave-to {
     transform: translateY(100%);
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 428px) {
     .main-page_title-imgs__container {
       .block-wrap {
         .block {

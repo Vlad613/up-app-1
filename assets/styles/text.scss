@@ -33,7 +33,7 @@ a {
 }
 
 .content-p {
-  font-family: 'Garamond', sans-serif;
+  font-family: 'Garamond', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -139,7 +139,7 @@ a {
 }
 
 .team-img-description-text {
-  font-family: 'Garamond', sans-serif;
+  font-family: 'Garamond', serif;
   font-style: normal;
   font-weight: bold;
   font-size: 37.5px;
@@ -192,7 +192,11 @@ a {
     font-size: 24px;
   }
 }
-
+@media screen and (max-width: 428px) {
+  .main-page_start-text {
+    font-size: 12.31vw;
+  }
+}
 @media screen and (max-width: 380px) {
   .item-project_description_value {
     font-size: 18px;

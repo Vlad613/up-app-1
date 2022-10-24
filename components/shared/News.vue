@@ -6,10 +6,10 @@
         { 'people__news-block': $route.path === '/people' },
       ]"
     >
-      <span class="main-page__content-title-position block-title title">
+      <span class="main-page__content-title-position block-title title" v-if="this.$route.path !== '/people'">
         news
       </span>
-      <div v-if="this.$route.path === '/people'" class="content-title">
+      <div v-if="this.$route.path === '/people'" class="content-title title">
         News
       </div>
       <div class="wrap">
@@ -64,14 +64,13 @@
 
     .title {
       margin-bottom: 102px;
-      margin-top: 0px;
+      margin-top: 50px;
       display: block;
     }
   }
 
   .people__news-block {
     margin-top: 288px;
-    background: #ffffff;
 
     .title {
       margin-bottom: 83px;

@@ -13,10 +13,9 @@
       class="content-type-1"
     >
       <div
-        class="content-type-1_img-wrap
-       item-project_img-wrap_height"
+        class="content-type-1_img-wrap"
       >
-        <ScrollAnimation :opacity="false" cover>
+        <ScrollAnimation :opacity="false">
           <img :src="getUrl(project.image.url)" alt="" />
         </ScrollAnimation>
       </div>
@@ -33,8 +32,8 @@
       v-if="project['__component'] === 'project-style-type.style-2'"
       class="content-type-2"
     >
-      <div class="content-type-2_img-wrap item-project_img-wrap_height">
-        <ScrollAnimation :opacity="false" cover>
+      <div class="content-type-2_img-wrap">
+        <ScrollAnimation :opacity="false">
           <img :src="getUrl(project.image.url)" alt="" />
         </ScrollAnimation>
       </div>
@@ -57,10 +56,9 @@
           <div
             :class="[
               'content-type-3_img-wrap-1',
-              { 'item-project_img-wrap_height': APP_WINDOW_SIZE.width <= 1280 },
             ]"
           >
-            <ScrollAnimation :opacity="false" cover>
+            <ScrollAnimation :opacity="false">
               <img :src="getUrl(project.image_1.url)" alt="" />
             </ScrollAnimation>
           </div>
@@ -76,10 +74,9 @@
           <div
             :class="[
               'content-type-3_img-wrap-2',
-              { 'item-project_img-wrap_height': APP_WINDOW_SIZE.width <= 1280 },
             ]"
           >
-            <ScrollAnimation :opacity="false" cover>
+            <ScrollAnimation :opacity="false">
               <img :src="getUrl(project.image_2.url)" alt="" />
             </ScrollAnimation>
           </div>
@@ -89,10 +86,9 @@
         <div
           :class="[
             'content-type-3_img-wrap-3',
-            { 'item-project_img-wrap_height': APP_WINDOW_SIZE.width <= 1280 },
           ]"
         >
-          <ScrollAnimation :opacity="false" cover>
+          <ScrollAnimation :opacity="false">
             <img :src="getUrl(project.image_3.url)" alt="" />
           </ScrollAnimation>
         </div>
@@ -106,7 +102,6 @@
       <div
         :class="[
           'content-type-4_img-wrap',
-          { 'item-project_img-wrap_height': APP_WINDOW_SIZE.width <= 1280 },
         ]"
       >
         <div
@@ -123,10 +118,9 @@
       <div
         :class="[
           'content-type-5_img-wrap',
-          { 'item-project_img-wrap_height': APP_WINDOW_SIZE.width <= 1280 },
         ]"
       >
-        <ScrollAnimation :opacity="false" cover>
+        <ScrollAnimation :opacity="false">
           <img :src="getUrl(project.image.url)" alt="" />
         </ScrollAnimation>
       </div>
@@ -147,10 +141,9 @@
       <div
         :class="[
           'content-type-6_img-wrap',
-          { 'item-project_img-wrap_height': APP_WINDOW_SIZE.width <= 1280 },
         ]"
       >
-        <ScrollAnimation :opacity="false" cover>
+        <ScrollAnimation :opacity="false">
           <img :src="getUrl(project.image.url)" alt="" />
         </ScrollAnimation>
       </div>
@@ -249,7 +242,7 @@
 
           .content-type-3_img-wrap-1 {
             width: calc(100% - var(--main-mini-margin) - 100px);
-            height: 983px;
+            height: auto;
             margin-left: var(--main-mini-margin);
             margin-right: 100px;
           }
@@ -268,7 +261,7 @@
 
           .content-type-3_img-wrap-2 {
             width: 100%;
-            height: 620px;
+            height: auto;
             margin-top: 673px;
           }
         }
@@ -280,7 +273,7 @@
 
         .content-type-3_img-wrap-3 {
           width: 70%;
-          height: 840px;
+          height: auto;
         }
       }
     }
@@ -297,7 +290,7 @@
 
       .content-type-4_img-wrap {
         width: 100%;
-        height: var(--winHeight);
+        height: auto;
 
         .background-fixed {
           width: 100%;
@@ -318,8 +311,12 @@
       //margin-top: 100px;
 
       .content-type-5_img-wrap {
-        width: 100%;
-        height: 970px;
+        width: auto;
+        max-width: 100%;
+        height: fit-content;
+        .scale-content {
+          text-align: right;
+        }
       }
 
       .content-p {
@@ -336,8 +333,12 @@
       margin-bottom: 144px;
 
       .content-type-6_img-wrap {
-        width: 100%;
-        height: 970px;
+        width: auto;
+        max-width: 100%;
+        height: fit-content;
+        .scale-content {
+          text-align: right;
+        }
       }
 
       .content-p {
@@ -353,7 +354,9 @@
         margin-bottom: 57px;
 
         .content-type-1_img-wrap {
-          width: 100%;
+          width: auto;
+          max-width: 100%;
+          height: fit-content;
         }
       }
 

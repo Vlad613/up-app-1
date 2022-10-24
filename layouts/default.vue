@@ -167,4 +167,13 @@
   p a, u {
     text-decoration: underline;
   }
+  p a, u, b, i {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    font-family: inherit;
+  }
+  p b {
+    font-weight: 600;
+  }
 </style>

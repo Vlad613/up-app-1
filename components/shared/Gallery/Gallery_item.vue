@@ -33,7 +33,7 @@
   .gallery-item {
     position: relative;
     width: 375px;
-    height: 440px;
+    height: auto;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -42,6 +42,7 @@
       width: 100%;
       height: 340px;
       overflow: hidden;
+      position: relative;
       &:hover img {
         transform: scale(1.2);
       }
@@ -50,13 +51,15 @@
         height: 100%;
         object-fit: cover;
         transition: 0.3s;
+        display: block;
+        object-position: center;
       }
     }
     a {
       cursor: pointer;
     }
     .title {
-      font-family: Garamond;
+      font-family: Garamond, serif;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;
@@ -81,7 +84,6 @@
   @media screen and (max-width: 1280px) {
     .gallery-item {
       width: 300px;
-      height: 340px;
 
       .gallery-item-img-wrap {
         height: 240px;
@@ -91,7 +93,6 @@
   @media screen and (max-width: 1024px) {
     .gallery-item {
       width: 290px;
-      height: 330px;
 
       .gallery-item-img-wrap {
         height: 230px;

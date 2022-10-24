@@ -1,6 +1,4 @@
 <template>
-
-
   <div class="description-block">
     <div class="description-text-wrap">
       <p class="content-p pages-content-margin-left-big">{{ mainText }}</p>
@@ -80,7 +78,9 @@ export default {
 
       .value {
         width: 100%;
-
+        .text-very-small {
+          opacity: 0.5;
+        }
         &.group {
           width: 50%;
         }
@@ -118,7 +118,7 @@ export default {
   .description-block {
     padding-top: 103px;
     flex-direction: column;
-    padding-bottom: 179px;
+    padding-bottom: 79px;
 
     .project-values-wrap {
       width: unset;

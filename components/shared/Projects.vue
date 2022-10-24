@@ -340,7 +340,9 @@
           width: 100%;
           margin-bottom: 50px;
           height: 470px;
-
+          img {
+            filter: brightness(0.8);
+          }
           .item-project-title {
             bottom: 60px;
             left: 60px;

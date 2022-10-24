@@ -11,19 +11,6 @@
             <path d="M2 2L32 32M32 2L2 32" stroke="white" stroke-width="4" />
           </svg>
         </button>
-        <button @click="largeImage = !largeImage">
-          <svg
-            viewBox="0 0 44 44"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22 0.786804V43.2132M43.2132 22H0.786797"
-              stroke="white"
-              stroke-width="4"
-            />
-          </svg>
-        </button>
       </div>
       <transition-group name="modal-image" class="image-list">
         <img
@@ -86,7 +73,7 @@
     data() {
       return {
         idx: 0,
-        largeImage: false,
+        largeImage: true,
       };
     },
     methods: {
@@ -125,6 +112,7 @@
     justify-content: center;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    backdrop-filter: blur(5px);
 
     .content {
       width: 80%;
@@ -144,7 +132,9 @@
           height: auto;
           &.largeImage {
             width: 100vw;
-            height: auto;
+            height: 100vh;
+            object-fit: contain;
+            object-position: 50% 50%;
             max-width: 100vw;
             max-height: 100vh;
           }

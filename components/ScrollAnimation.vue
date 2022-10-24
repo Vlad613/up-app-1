@@ -81,7 +81,9 @@ export default {
           this.scaleValue
           :
           this.getScale();
-
+        if(this.APP_WINDOW_SIZE.width < 600) {
+          this.scaleValue = 1
+        }
         this.translateYValue = this.translate ?
           (
             (this.translateYValue > 0) && (this.translateYValue < this.getTranslateY()) ?
@@ -166,15 +168,27 @@ export default {
   &.cover {
     width: 100%;
     height: 100%;
+    .scale-content {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
   .scale-content {
     width: 100%;
     height: 100%;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      max-height: 100vh;
+      max-width: 100%;
+      display: block;
     }
   }
 }
