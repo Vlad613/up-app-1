@@ -136,6 +136,7 @@
           width: 100%;
           height: auto;
           display: block;
+          overflow: visible;
 
           path {
             stroke: #000000;
