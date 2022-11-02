@@ -113,20 +113,23 @@ export default {
 
     getTranslateY() {
       let result = 0;
-      let full = +this.getPercent(
-        this.translateY.start,
-        this.translateY.end,
-      ).toFixed(3);
+      if(this.translateY) {
+        let full = +this.getPercent(
+          this.translateY.start,
+          this.translateY.end,
+        ).toFixed(3);
 
-      if (full < 50) {
-        result = (full / 50) * 150;
-      } else if (full > 50) {
-        result = 150;
-      } else {
-        result = 0;
+        if (full < 50) {
+          result = (full / 50) * 150;
+        } else if (full > 50) {
+          result = 150;
+        } else {
+          result = 0;
+        }
+
+        return 150 - result;
       }
-
-      return 150 - result;
+      return 0
     },
 
     getPercent(start, end, type, offset = 0) {

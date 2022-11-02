@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+    <div class="under_image content-p" v-html="data.about.description_image" />
   </div>
 </template>
 
@@ -104,6 +105,12 @@
           margin-right: var(--main-mini-margin);
         }
       }
+    }
+    .under_image {
+      width: calc((100% - var(--main-very-mini-margin)) / 2);
+      padding-left: var(--main-big-margin);
+      box-sizing: border-box;
+      margin: var(--main-very-mini-margin) 0;
     }
   }
 
@@ -191,6 +198,10 @@
           width: unset;
           order: 2;
         }
+      }
+      .under_image {
+        width: 100%;
+        padding-right: var(--main-mini-margin);
       }
     }
   }

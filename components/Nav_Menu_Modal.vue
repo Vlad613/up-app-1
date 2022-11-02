@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column-reverse;
     /*background: linear-gradient(180deg, #a5c8db 0%, #5480a3 100%);*/
-    background-color: #a5c3d7;
+    background-color: #ffffff;
     z-index: 900;
 
     .content {
