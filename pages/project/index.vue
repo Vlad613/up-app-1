@@ -164,6 +164,12 @@
         display: flex;
         flex-direction: column;
         z-index: 1;
+        @media (max-width: 428px) {
+          margin-left: var(--main-big-margin);
+        }
+        @media (max-height: 500px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+          margin-left: var(--main-big-margin);
+        }
       }
       .arrow {
         position: absolute;

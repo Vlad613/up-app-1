@@ -164,6 +164,11 @@
       --main-mini-margin: 24px;
     }
   }
+  @media (max-height: 500px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) and (max-width: 768px) {
+    html {
+      --main-big-margin: 105px;
+    }
+  }
   p a, u {
     text-decoration: underline;
   }

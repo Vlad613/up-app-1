@@ -136,6 +136,7 @@
       top: 60px;
       left: 66px;
       transition: 1s;
+      height: auto;
       @media (max-width: 1024px) {
         top: 40px;
         left: 30px;
@@ -244,7 +245,7 @@
     }
   }
 
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 528px) {
     .header {
       padding: 10px 24px 10px 14px;
 
