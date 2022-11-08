@@ -104,10 +104,11 @@
           'content-type-4_img-wrap',
         ]"
       >
-        <div
-          class="background-fixed"
-          :style="`background-image: url(${getUrl(project.image.url)})`"
-        ></div>
+        <img :src="getUrl(project.image.url)" alt="">
+<!--        <div-->
+<!--          class="background-fixed"-->
+<!--          :style="`background-image: url(${getUrl(project.image.url)})`"-->
+<!--        ></div>-->
       </div>
     </div>
 
@@ -281,23 +282,24 @@
     .content-type-4 {
       width: 100%;
       margin-bottom: 280px;
-      position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
       z-index: -1;
+      display: flex;
+      flex-direction: column;
 
       .content-type-4_img-wrap {
         width: 100%;
         height: auto;
-
-        .background-fixed {
-          width: 100%;
-          height: 100%;
-          background-attachment: fixed;
-          background-size: cover;
+        img {
+          width: auto;
+          height: auto;
+          object-fit: contain;
         }
+        //.background-fixed {
+        //  width: 100%;
+        //  height: 100%;
+        //  background-attachment: fixed;
+        //  background-size: cover;
+        //}
       }
     }
 

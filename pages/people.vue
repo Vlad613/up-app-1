@@ -571,7 +571,7 @@
       transition: height 0.3s;
       .titles {
         margin-right: var(--main-mini-margin);
-        margin-left: var(--main-mini-margin);
+        margin-left: var(--main-big-margin);
         position: absolute;
         display: flex;
         flex-direction: column;

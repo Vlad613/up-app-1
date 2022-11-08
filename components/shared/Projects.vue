@@ -390,10 +390,6 @@ export default {
         @media (max-width: 1024px) {
           display: flex;
         }
-
-        &:nth-child(1) {
-          display: flex;
-        }
       }
 
       a.special {
