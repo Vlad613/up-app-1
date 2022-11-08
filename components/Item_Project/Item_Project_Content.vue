@@ -104,11 +104,10 @@
           'content-type-4_img-wrap',
         ]"
       >
-        <img :src="getUrl(project.image.url)" alt="">
-<!--        <div-->
-<!--          class="background-fixed"-->
-<!--          :style="`background-image: url(${getUrl(project.image.url)})`"-->
-<!--        ></div>-->
+        <div
+          class="background-fixed"
+          :style="`background-image: url(${getUrl(project.image.url)})`"
+        ></div>
       </div>
     </div>
 
@@ -283,23 +282,17 @@
       width: 100%;
       margin-bottom: 280px;
       z-index: -1;
-      display: flex;
-      flex-direction: column;
-
+      height: 100%;
       .content-type-4_img-wrap {
         width: 100%;
-        height: auto;
-        img {
-          width: auto;
-          height: auto;
-          object-fit: contain;
+        height: 100%;
+        position: relative;
+        .background-fixed {
+          width: 100%;
+          height: 100%;
+          background-attachment: fixed;
+          background-size: cover;
         }
-        //.background-fixed {
-        //  width: 100%;
-        //  height: 100%;
-        //  background-attachment: fixed;
-        //  background-size: cover;
-        //}
       }
     }
 
