@@ -24,7 +24,7 @@
           <path d="M2 2L32 32M32 2L2 32" stroke="black" stroke-width="4" />
         </svg>
       </button>
-      <div class="item-project_description_value zoom-btn" @click="zoom = !zoom">{{ zoom ? 'back' : 'zoom' }}</div>
+      <div class="item-project-title-text-2 zoom-btn" @click="zoom = !zoom">{{ zoom ? 'back' : 'zoom' }}</div>
     </div>
     <div :class="['paginator', {zoomWhite: zoom}]">
       <div class="arrow-wrap">
@@ -166,11 +166,11 @@
 
         .btn-left,
         .btn-right {
-          width: 33px;
+          width: 30px;
           min-width: unset;
           margin: 0;
           svg {
-            height: 25px;
+            height: 22px;
             width: auto;
           }
         }
@@ -209,10 +209,11 @@
       }
       .zoom-btn {
         height: fit-content;
+        font-weight: normal;
       }
       button {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         cursor: pointer;
       }
     }

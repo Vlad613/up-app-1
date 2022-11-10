@@ -131,7 +131,7 @@
     padding: 60px 70px 0 66px;
 
     .header-logo {
-      width: 110px;
+      width: 111px;
       position: absolute;
       top: 60px;
       left: 66px;
@@ -145,20 +145,27 @@
       &.animation {
         transition: 0s;
         top: 50vh;
-        left: 310px;
+        left: 330px;
         transform: translateY(-200%) scale(3);
+        @media (max-width: 1280px) {
+          left: 270px;
+        }
+
         @media (max-width: 1024px) {
-          left: 170px;
+          left: 145px;
           transform: translateY(-150%) scale(2);
         }
         @media (max-width: 768px) {
-          left: 120px;
+          left: 124px;
+        }
+        @media (max-width: 528px) {
+          left: 113px;
         }
         @media (max-width: 428px) {
-          left: 100px;
+          left: 96px;
         }
-        @media (max-width: 400px) {
-          left: 60px;
+        @media (max-height: 500px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) and (max-width: 768px) {
+          left: 141px;
         }
       }
 
@@ -183,7 +190,8 @@
 
       svg {
         width: 100%;
-        height: 100%;
+        height: auto;
+        display: block;
 
         path {
           fill: #ffffff;

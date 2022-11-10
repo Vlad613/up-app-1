@@ -280,7 +280,8 @@
 
     .content-type-4 {
       width: 100%;
-      margin-bottom: 280px;
+      margin-bottom: 50px;
+      margin-top: 25px;
       z-index: -1;
       height: 100%;
       .content-type-4_img-wrap {
@@ -392,7 +393,8 @@
       }
 
       .content-type-4 {
-        margin-bottom: 57px;
+        margin-bottom: 50px;
+        margin-top: 0;
       }
 
       .content-type-5 {
@@ -448,7 +450,8 @@
       }
 
       .content-type-4 {
-        margin-bottom: 90px;
+        margin-bottom: 50px;
+        margin-top: 0;
       }
 
       .content-type-5 {
@@ -550,8 +553,12 @@
           }
         }
       }
+      &.project-content-4 {
+      height: 100vw;
+      }
       .content-type-4 {
         margin-bottom: 50px;
+        margin-top: 0;
       }
       .content-type-5 {
         width: unset;

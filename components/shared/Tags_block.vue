@@ -19,7 +19,7 @@
              class="value">
             <span class="item-project_pres-view"
                   style="cursor: pointer"
-                  @click="setModalImgIsActive">presentation view</span>
+                  @click="setModalImgIsActive">gallery view</span>
         </div>
       </div>
     </div>
