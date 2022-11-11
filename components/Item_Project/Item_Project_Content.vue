@@ -104,10 +104,11 @@
           'content-type-4_img-wrap',
         ]"
       >
-        <div
-          class="background-fixed"
-          :style="`background-image: url(${getUrl(project.image.url)})`"
-        ></div>
+<!--        <div-->
+<!--          class="background-fixed"-->
+<!--          :style="`background-image: url(${getUrl(project.image.url)})`"-->
+<!--        ></div>-->
+        <img :src="getUrl(project.image.url)" alt="">
       </div>
     </div>
 
@@ -284,10 +285,36 @@
       margin-top: 25px;
       z-index: -1;
       height: 100%;
+      position: relative;
+      overflow: hidden;
       .content-type-4_img-wrap {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
-        position: relative;
+        z-index: -1;
+        clip: rect(0, auto, auto, 0);
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          max-height: 100%;
+          position: fixed;
+          transition: all .5s ease-in-out;
+          -o-object-fit: cover;
+          object-fit: cover;
+          object-position: center;
+          transform: translateZ(0);
+          will-change: transform;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          opacity: 1;
+        }
         .background-fixed {
           width: 100%;
           height: 100%;

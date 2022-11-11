@@ -90,8 +90,8 @@ export const actions = {
   setModalIsActive({ commit }, value) {
     commit('SET_MODAL_IS_ACTIVE');
   },
-  setModalImgIsActive({ commit }) {
-    commit('SET_MODAL_IMG_IS_ACTIVE');
+  setModalImgIsActive({ commit }, value) {
+    commit('SET_MODAL_IMG_IS_ACTIVE', value);
   },
 };
 

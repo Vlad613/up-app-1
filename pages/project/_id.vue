@@ -40,7 +40,7 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+import {mapActions, mapGetters} from 'vuex';
 
   import Img_Modal from '~/components/Img_Modal';
   import Paginator from '~/components/shared/elements/Paginator';
@@ -227,7 +227,19 @@
         project: {},
       };
     },
+    mounted() {
+    if(process.client) {
+      // add event listener for ESC key press and close modal
+      document.addEventListener('keyup', this.closeModal);
+
+    }},
     methods: {
+      ...mapActions('app', ['setModalImgIsActive']),
+      closeModal(e) {
+        if (e.keyCode === 27 && this.MODAL_IMG_IS_ACTIVE) {
+          this.setModalImgIsActive(false);
+        }
+      },
       scrollTo() {
         if (process.client) {
           const href = document.getElementsByClassName('description-block')[0];
