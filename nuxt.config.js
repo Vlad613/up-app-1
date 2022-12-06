@@ -27,6 +27,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-intersect.js', ssr: false },
     { src: '~/plugins/vue-awesome-swiper', mode: 'client' },
+    "~/plugins/gtag"
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -36,8 +37,12 @@ export default {
   buildModules: [],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxtjs/sitemap'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  sitemap: {
+    hostname: 'https://uparchitecture.nl',
+    gzip: true,
+  }
 };
