@@ -138,7 +138,7 @@
         }, 1000);
       },
       getUrl(url) {
-        return `https://strapi-up.verodigital.site${url}`;
+        return `https://strapi.uparchitecture.nl${url}`;
       },
     },
   };

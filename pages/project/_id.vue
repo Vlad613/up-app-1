@@ -118,7 +118,7 @@ import {mapActions, mapGetters} from 'vuex';
               hid: 'og:image',
               property: 'og:image',
               content:
-                'https://strapi-up.verodigital.site/' +
+                'https://strapi.uparchitecture.nl/' +
                 (this.project.SEO.seoImage
                   ? this.project.SEO.seoImage.url
                   : '/uploads/28_s5_cam001_211541b7b2.jpg'),
@@ -142,7 +142,7 @@ import {mapActions, mapGetters} from 'vuex';
             {
               name: 'twitter:image',
               content:
-                'https://strapi-up.verodigital.site/' +
+                'https://strapi.uparchitecture.nl/' +
                 (this.project.SEO.seoImage
                   ? this.project.SEO.seoImage.url
                   : '/uploads/28_s5_cam001_211541b7b2.jpg'),
@@ -193,7 +193,7 @@ import {mapActions, mapGetters} from 'vuex';
               hid: 'og:image',
               property: 'og:image',
               content:
-                'https://strapi-up.verodigital.site/' +
+                'https://strapi.uparchitecture.nl/' +
                 '/uploads/28_s5_cam001_211541b7b2.jpg',
             },
             {
@@ -215,7 +215,7 @@ import {mapActions, mapGetters} from 'vuex';
             {
               name: 'twitter:image',
               content:
-                'https://strapi-up.verodigital.site/' +
+                'https://strapi.uparchitecture.nl/' +
                 '/uploads/28_s5_cam001_211541b7b2.jpg',
             },
           ],
@@ -252,7 +252,7 @@ import {mapActions, mapGetters} from 'vuex';
         }
       },
       getUrl(url) {
-        return `https://strapi-up.verodigital.site${url}`;
+        return `https://strapi.uparchitecture.nl${url}`;
       },
     },
     computed: {

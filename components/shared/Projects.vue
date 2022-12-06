@@ -190,11 +190,11 @@ export default {
     }
 
     this.projectsList = await fetch(
-      'https://strapi-up.verodigital.site/projects-lists',
+      'https://strapi.uparchitecture.nl/projects-lists',
     ).then(res => res.json());
     this.projectsList = this.projectsList.sort(compare)
     this.projectsPage = await fetch(
-      'https://strapi-up.verodigital.site/project',
+      'https://strapi.uparchitecture.nl/project',
     ).then(res => res.json());
   },
 
@@ -206,7 +206,7 @@ export default {
   },
   methods: {
     getUrl(url) {
-      return `https://strapi-up.verodigital.site${url}`;
+      return `https://strapi.uparchitecture.nl${url}`;
     },
     bigClass(idx) {
       return idx === 0 || idx === 5;

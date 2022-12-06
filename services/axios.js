@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: `https://strapi-up.verodigital.site/`,
+  baseURL: `https://strapi.uparchitecture.nl/`,
   withCredentials: false,
   headers: {
     Accept: 'application/json',

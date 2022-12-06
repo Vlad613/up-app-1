@@ -29,7 +29,7 @@
 
     async fetch() {
       this.news = await fetch(
-        'https://strapi-up.verodigital.site/news-lists',
+        'https://strapi.uparchitecture.nl/news-lists',
       ).then(res => res.json());
     },
 

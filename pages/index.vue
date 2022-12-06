@@ -90,7 +90,7 @@
             hid: 'og:image',
             property: 'og:image',
             content:
-              'https://strapi-up.verodigital.site/' +
+              'https://strapi.uparchitecture.nl/' +
               (this.home.SEO.seoImage
                 ? this.home.SEO.seoImage.url
                 : '/uploads/28_s5_cam001_211541b7b2.jpg'),
@@ -114,7 +114,7 @@
           {
             name: 'twitter:image',
             content:
-              'https://strapi-up.verodigital.site/' +
+              'https://strapi.uparchitecture.nl/' +
               (this.home.SEO.seoImage
                 ? this.home.SEO.seoImage.url
                 : '/uploads/28_s5_cam001_211541b7b2.jpg'),

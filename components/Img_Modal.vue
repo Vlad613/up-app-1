@@ -82,7 +82,7 @@
     methods: {
       ...mapActions('app', ['setModalImgIsActive']),
       getUrl(url) {
-        return `https://strapi-up.verodigital.site${url}`;
+        return `https://strapi.uparchitecture.nl${url}`;
       },
       idxUp() {
         if (this.idx !== this.images.length - 1) {
