@@ -1,3 +1,4 @@
+const axios = require('axios')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -44,5 +45,9 @@ export default {
   sitemap: {
     hostname: 'https://uparchitecture.nl',
     gzip: true,
+    routes: async () => {
+      const { data } = await axios.get('https://strapi.uparchitecture.nl/projects-lists')
+      return data.map((project) => `/project/${project.id}`)
+    }
   }
 };
