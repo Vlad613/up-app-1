@@ -68,7 +68,7 @@ export default {
   head() {
     if(this.news.SEO) {
       return {
-        title: this.news.SEO.seoTitle ? this.news.SEO.seoTitle : 'News Title',
+        title: this.news.SEO.seoTitle ? this.news.SEO.seoTitle : this.news.title ? this.news.title : 'News Title',
         meta: [
           {
             hid: 'description',

@@ -1,7 +1,7 @@
 <template>
   <div class="description-block">
     <div class="description-text-wrap">
-      <p class="content-p pages-content-margin-left-big">{{ mainText }}</p>
+      <p class="content-p pages-content-margin-left-big" v-html="mainText" />
     </div>
 
     <div class="project-values-wrap">
