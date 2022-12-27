@@ -40,9 +40,6 @@ export default {
     const lastElements = results.splice(results.length - padding, padding);
     results.unshift(...lastElements);
     this.news = results;
-    for (let i = 0; i < this.news.length; i++) {
-      console.log(this.news[i].date)
-    }
   },
 
   data() {
